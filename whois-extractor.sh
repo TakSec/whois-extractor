@@ -20,3 +20,6 @@ while IFS= read -r domain; do
 
   echo "${domain},${registrar#*:},${organization#*:},${name#*:},${email#*:},${phone#*:},${address#*:},${nameservers#*:},${ip_address},${registration_date#*:},${expiration_date#*:}" >> "$output_file"
 done < "$input_file"
+
+echo "-------"
+echo "Done!"
